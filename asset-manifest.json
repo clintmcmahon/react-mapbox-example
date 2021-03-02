@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-mapbox-example/static/css/main.db7dd133.chunk.css",
+    "main.js": "/react-mapbox-example/static/js/main.da103b2c.chunk.js",
+    "main.js.map": "/react-mapbox-example/static/js/main.da103b2c.chunk.js.map",
+    "runtime-main.js": "/react-mapbox-example/static/js/runtime-main.356903e7.js",
+    "runtime-main.js.map": "/react-mapbox-example/static/js/runtime-main.356903e7.js.map",
+    "static/js/2.4e6cffaf.chunk.js": "/react-mapbox-example/static/js/2.4e6cffaf.chunk.js",
+    "static/js/2.4e6cffaf.chunk.js.map": "/react-mapbox-example/static/js/2.4e6cffaf.chunk.js.map",
+    "index.html": "/react-mapbox-example/index.html",
+    "precache-manifest.7b116f595c43ead1da6806664877aa33.js": "/react-mapbox-example/precache-manifest.7b116f595c43ead1da6806664877aa33.js",
+    "service-worker.js": "/react-mapbox-example/service-worker.js",
+    "static/css/main.db7dd133.chunk.css.map": "/react-mapbox-example/static/css/main.db7dd133.chunk.css.map",
+    "static/js/2.4e6cffaf.chunk.js.LICENSE.txt": "/react-mapbox-example/static/js/2.4e6cffaf.chunk.js.LICENSE.txt",
+    "static/media/mn-districts.geojson": "/react-mapbox-example/static/media/mn-districts.73adc9f4.geojson"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.356903e7.js",
+    "static/js/2.4e6cffaf.chunk.js",
+    "static/css/main.db7dd133.chunk.css",
+    "static/js/main.da103b2c.chunk.js"
+  ]
+}
