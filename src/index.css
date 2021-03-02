@@ -28,9 +28,15 @@ code {
 }
 
 .map{
-  height: 400px;
+  margin: 0 auto;
+  max-width: 800px;
+  height: 600px;
 }
 
+.info {
+  width: 100%;
+  text-align: center;
+}
 footer{
   padding: 30px 20px
 }

@@ -8,11 +8,11 @@ function Districts(props) {
     mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_KEY;
 
     const mapContainer = useRef(null);
-    
+
     const [long, setLong] = useState(-94.503809);
     const [lat, setLat] = useState(46.443226);
     const [zoom, setZoom] = useState(4.5);
-    
+
     const [hoveredDistrict, _setHoveredDistrict] = useState(null);
     const hoveredDistrictRef = useRef(hoveredDistrict);
 
@@ -113,11 +113,11 @@ function Districts(props) {
 
             map.on('move', () => {
                 const { lng, lat } = map.getCenter();
-          
+
                 setLong(lng.toFixed(4));
                 setLat(lat.toFixed(4));
                 setZoom(map.getZoom().toFixed(2));
-              });
+            });
 
         });
 
@@ -125,9 +125,12 @@ function Districts(props) {
 
     return (
         <div className="district-map-wrapper">
+
+            <div className="info">
+                Current hovered district: <strong>{hoveredDistrict ? hoveredDistrict : ""}</strong>
+            </div>
             <div id="districtDetailMap" className="map">
                 <div style={{ height: "100%" }} ref={mapContainer}>
-
                 </div>
             </div>
         </div>
