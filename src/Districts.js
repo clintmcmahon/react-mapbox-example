@@ -1,14 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
 import mnDistricts from "./data/mn/mn-districts.geojson";
-import ReactDOM from 'react-dom';
 import mapboxgl from 'mapbox-gl';
 
 function Districts(props) {
+
+    //Assign the Mapbox token from the environment variable set in .env
     mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_KEY;
+
     const mapContainer = useRef(null);
+    
     const [long, setLong] = useState(-94.503809);
     const [lat, setLat] = useState(46.443226);
     const [zoom, setZoom] = useState(4.5);
+    
     const [hoveredDistrict, _setHoveredDistrict] = useState(null);
     const hoveredDistrictRef = useRef(hoveredDistrict);
 
@@ -27,8 +31,9 @@ function Districts(props) {
         });
 
 
-            // Add zoom and rotation controls to the map.
-            map.addControl(new mapboxgl.NavigationControl());
+        // Add zoom and rotation controls to the map.
+        map.addControl(new mapboxgl.NavigationControl());
+
         map.once("load", function () {
 
             map.addSource('district-source', {
@@ -105,6 +110,14 @@ function Districts(props) {
                 }
                 setHoveredDistrict(null);
             });
+
+            map.on('move', () => {
+                const { lng, lat } = map.getCenter();
+          
+                setLong(lng.toFixed(4));
+                setLat(lat.toFixed(4));
+                setZoom(map.getZoom().toFixed(2));
+              });
 
         });
 
